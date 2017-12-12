@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Qdh Module With RequireJs</title>
+    <style>
+       #map, #map2 {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>Module Maps Demo</h3>
+    <div id="map" data-lat="-6.175110" data-lng="106.865039"></div>
+    
+    <p id="p"></p>
+    <p>
+      <button type="button" id="ZoomIn">ZoomIn Map</button>
+      &nbsp;<button type="button" id="ZoomOut">ZoomOut Map</button>
+    </p>
+    <div id="map2"></div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjBAhmeLFs9EDjG8VrrwzrEiuAlBhoeKk"></script>
+    <script src="js/require.js"></script>
+    <script type="text/javascript">
+      require(['js/main'], function() {
+          // Configuration loaded now, safe to do other require calls
+          // that depend on that config.
+          requirejs(["pages/home"])
+      });
+    </script>
+  </body>
+</html>

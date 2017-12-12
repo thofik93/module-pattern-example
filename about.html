@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebComponent With RequireJs</title>
+    <style>
+       #map, #map2 {
+        height: 400px;
+        width: 100%;
+       }
+       .btn {
+        display: inline-flex;
+        min-width: 180px;
+        padding: 8px 16px;
+        background-color: #eaeaea;
+        border: 1px solid #f5f5f5;
+        outline: none;
+        box-shadow: none;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+       }
+       .btn:hover {
+        background-color: #d7d7d7;
+        cursor: pointer;
+        transition: background .3s ease-in-out;
+       }
+       .btn.is-loading:before {
+        content: " ";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 99;
+        background-color: rgba(0, 0, 0, 0.4);
+       }
+       .btn.is-loading:after {
+        content: " ";
+        display: inline-block;
+        background-image: url("images/loading.gif");
+        height: 30px;
+        width: 30px;
+        left: 0;
+        right: 0;
+        top: 0;
+        left: 0;
+        margin: 0 auto;
+        position: absolute;
+        background-size: cover;
+        z-index: 100;
+       }
+       .btn.is-loading {
+        pointer-events: none;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>Module Button</h3>
+    
+    <button type="button" class="btn" id="normalButton">Button 1</button>
+    <button type="button" class="btn" id="normalButtonTwo">Button 2</button>
+
+    <hr />
+    
+    <a href="#" id="setLoading">set loading</a>
+    <a href="#" id="stop">stop</a>
+
+    <script src="js/require.js"></script>
+    <script type="text/javascript">
+      require(['js/main'], function() {
+          // Configuration loaded now, safe to do other require calls
+          // that depend on that config.
+          requirejs(["pages/about"])
+      });
+    </script>
+  </body>
+</html>
