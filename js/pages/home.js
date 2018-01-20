@@ -1,5 +1,5 @@
 
-define(["jquery", "modules/qdh", "modules/map/map"], function($) {
+define(["jquery", "modules/montase", "modules/map/map"], function($) {
   
   $(document).ready(function(){
     
@@ -15,7 +15,7 @@ define(["jquery", "modules/qdh", "modules/map/map"], function($) {
     console.log(lat)
     console.log(lng)
 
-    var googMap = qdh.map.init(document.getElementById('map'), {
+    var googMap = montase.map.init(document.getElementById('map'), {
       center: arrPosition[0],
       zoom: 14,
       scrollwheel: false,
@@ -288,7 +288,7 @@ define(["jquery", "modules/qdh", "modules/map/map"], function($) {
       map.setZoom(--zoom)
     })
 
-    var googMap2 = qdh.map.init(document.getElementById('map2'), {
+    var googMap2 = montase.map.init(document.getElementById('map2'), {
       zoom: 14,
       center: arrPosition[2]
     })

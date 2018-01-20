@@ -1,9 +1,9 @@
 requirejs.config({
     "baseUrl": "js",
     "shim": {
-        "modules/qdh": ["jquery"],
-        "modules/map/map": ["modules/qdh"],
-        "modules/button/button": ["modules/qdh"],
+        "modules/montase": ["jquery"],
+        "modules/map/map": ["modules/montase"],
+        "modules/button/button": ["modules/montase"],
         "modules/button/buttonDropdown": ["modules/button/button"]
     }
 });

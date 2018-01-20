@@ -1,8 +1,8 @@
-define(["jquery", "modules/qdh", "modules/button/button"/*, "modules/button/buttonDropdown"*/], function($) {  
+define(["jquery", "modules/montase", "modules/button/button"], function($) {  
 
   $(function(){
-    var btn   = new qdh.button.Init(document.querySelectorAll('#normalButton'))
-    var btn2  = new qdh.button.Init($('#normalButtonTwo'))
+    var btn   = new montase.button.Init(document.querySelectorAll('#normalButton'))
+    var btn2  = new montase.button.Init($('#normalButtonTwo'))
     document.getElementById('setLoading')
       .addEventListener('click', function(e){
         e.preventDefault()

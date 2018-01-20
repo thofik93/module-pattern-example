@@ -1,7 +1,7 @@
-var qdh = (function(qdh){
+var montase = (function(montase){
   "use strict"
 
-  var button = qdh.button = qdh.button || {}
+  var button = montase.button = montase.button || {}
 
   var loadingClassName = "is-loading"
   
@@ -19,6 +19,6 @@ var qdh = (function(qdh){
     return this.$el.removeClass(loadingClassName)
   }
 
-  return qdh
+  return montase;
 
-})(qdh || {});
+})(montase || {});

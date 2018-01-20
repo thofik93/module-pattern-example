@@ -1,7 +1,7 @@
-var qdh = (function(qdh){
+var montase = (function(montase){
 	'use strict'
 	 
-  var Map = qdh.map = qdh.map || {}
+  var Map = montase.map = montase.map || {}
 	/*
 		Default property 
 	 */
@@ -54,5 +54,5 @@ var qdh = (function(qdh){
 	 	}
 	}
 
-	return qdh
-})(qdh || {});
+	return montase
+})(montase || {});

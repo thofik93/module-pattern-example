@@ -1,7 +1,7 @@
-var qdh = (function(qdh){
+var montase = (function(montase){
   'use strict'
 
-  var buttonDropdown = qdh.buttonDropdown = qdh.buttonDropdown || {}
+  var buttonDropdown = montase.buttonDropdown = montase.buttonDropdown || {}
   
 
   buttonDropdown.setDropdown = function() {
@@ -9,8 +9,8 @@ var qdh = (function(qdh){
   }
 
 
-  buttonDropdown = Object.assign(buttonDropdown, qdh.button)
+  buttonDropdown = Object.assign(buttonDropdown, montase.button)
 
-  return qdh
+  return montase
 
-})(qdh || {});
+})(montase || {});
